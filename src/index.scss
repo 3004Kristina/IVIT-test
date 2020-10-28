@@ -1,0 +1,252 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+
+    .contact_info_wrapper {
+        background-color: #484848;
+
+        .contact_info {
+            max-width: 938px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            p {
+                margin: 10px 0;
+                color: #ffffff;
+                font-size: 17px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: normal;
+                text-align: left;
+                text-transform: uppercase;
+                line-height: normal;
+                font-family: "Plumb Condensed", sans-serif;
+
+                .pink {
+                    color: #f5135c;
+                }
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .header_logo {
+        background-color: #5b749a;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%);
+
+        .header_logo_wrapper {
+            padding: 32px 0 29px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                display: block;
+                margin-right: 14px;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: #ffffff;
+                font-family: "Trebuchet MS", sans-serif;
+                font-size: 44px;
+                font-weight: 700;
+                font-style: normal;
+                text-align: left;
+                text-transform: uppercase;
+                letter-spacing: 1.1px;
+                line-height: normal;
+
+                .pink {
+                    color: #f5135c;
+                }
+            }
+        }
+    }
+}
+
+.main_menu_wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .main_menu {
+        background-color: #ffffff;
+        opacity: 0.78;
+        position: absolute;
+        top:0;
+        width: 100%;
+
+        menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: stretch;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+
+            &:before {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 11px;
+                background-image: url("img/ellipse.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: absolute;
+                bottom: -9px;
+                right: 0;
+            }
+
+            > li {
+                position: relative;
+
+                &:before {
+                    display: block;
+                    content: "";
+                    width: 2px;
+                    height: 100%;
+                    background-image: url("img/palka.svg");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &:last-child:after {
+                    display: block;
+                    content: "";
+                    width: 2px;
+                    height: 100%;
+                    background-image: url("img/palka.svg");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                a {
+                    display: block;
+                    color: #383838;
+                    font-family: "Plumb Condensed", sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 10px 40px 6px;
+                    margin: 0;
+
+                    span {
+                        display: inline-block;
+                        border-bottom: 2px solid transparent;
+                        padding: 0 30px 2px;
+                    }
+                }
+
+                &.active a span {
+                    border-color: #f5135c;
+                }
+            }
+        }
+    }
+}
+
+.main_banner {
+    background-image: url(img/4-layers.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 37.5vw;
+    position: relative;
+
+
+    .main_banner_text {
+        position: absolute;
+        bottom: 3.5vw;
+        left: 40%;
+
+        p {
+            margin: 0;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.46);
+            color: #ffffff;
+            font-family: "Plumb Condensed", sans-serif;
+            font-size: 2vw;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: right;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+    }
+}
+
+.snils_about_wrapper {
+    padding-top: 62px;
+
+    h2 {
+        text-align: center;
+        background-color: #f5135c;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.46);
+        color: #ffffff;
+        font-family: "Plumb Condensed", sans-serif;
+        font-size: 29px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 15px 0 10px;
+    }
+
+    p {
+        color: #272727;
+        font-family: "Trebuchet MS", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 24px;
+        text-align: center;
+        margin: 33px 0 45px;
+    }
+
+    .snils_about{
+        display: flex;
+        flex-direction: row;
+
+
+    }
+}
+
