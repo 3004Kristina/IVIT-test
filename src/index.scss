@@ -212,7 +212,7 @@ html, body {
 }
 
 .snils_about_wrapper {
-    padding-top: 62px;
+    padding: 62px 0 90px;
 
     h2 {
         text-align: center;
@@ -245,8 +245,78 @@ html, body {
     .snils_about{
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
+        margin: 45px 0 50px;
 
+        .snils_about_item{
+            margin: 0 25px;
 
+            img{
+                display: block;
+                width: 440px;
+                height: 310px;
+                border: 1px solid rgba(109, 139, 49, 0.64);
+            }
+
+            p{
+                color: #272727;
+                font-family: "Trebuchet MS", sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 24px;
+                text-align: left;
+                margin: 14px 0;
+            }
+
+            .snils_list{
+                list-style: none;
+                color: #272727;
+                font-family: "Trebuchet MS", sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: normal;
+                text-align: left;
+                line-height: 24px;
+                margin: 0;
+
+                li{
+                    position: relative;
+                    margin: 20px 0;
+
+                    &:before{
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        width: 29px;
+                        height: 29px;
+                        bottom: 0;
+                        left: -42px;
+                        background-image: url("img/tick.png");
+                        background-repeat: no-repeat;
+                        background-position: center center;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .snils_about_text{
+        p{
+            color: #f5135c;
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 24px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+        }
     }
 }
 
