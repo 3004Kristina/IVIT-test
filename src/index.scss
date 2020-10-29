@@ -91,7 +91,7 @@ html, body {
 .main_menu_wrapper {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 
     .main_menu {
         background-color: #ffffff;
@@ -159,6 +159,7 @@ html, body {
                         margin: 0;
                         display: none;
                     }
+
                 }
 
 
@@ -320,7 +321,7 @@ html, body {
                         position: absolute;
                         width: 29px;
                         height: 29px;
-                        bottom: 0;
+                        top: -11px;
                         left: -42px;
                         background-image: url("img/tick.png");
                         background-repeat: no-repeat;
@@ -347,6 +348,189 @@ html, body {
         }
     }
 }
+
+.snils_make_instruction_wrapper {
+    max-width: 1366px;
+    width: 100%;
+    height: 720px;
+    margin: 0 auto;
+    padding: 40px 0 0;
+    background-image: url(img/where-bg-01.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+
+    p {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        color: #ffffff;
+        font-family: "Trebuchet MS", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 37px;
+    }
+
+    .snils_make_instruction_text {
+        margin: 0 auto;
+        background-image: url(img/trapezia.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        max-width: 579px;
+        height: 88px;
+        position: relative;
+
+        &:before {
+            display: block;
+            content: "";
+            width: 622px;
+            height: 2px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            background-color: #ffffff;
+            position: absolute;
+            top: 5px;
+            right: -20px;
+        }
+
+        &:after {
+            display: block;
+            content: "";
+            width: 495px;
+            height: 2px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            background-color: #ffffff;
+            position: absolute;
+            top: 80px;
+            right: 43px;
+        }
+
+
+        p {
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.46);
+            color: #ffffff;
+            font-family: "Plumb Condensed", sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: center;
+            text-transform: uppercase;
+            position: absolute;
+            top: -28px;
+            left: 69px;
+        }
+    }
+
+    .snils_make_instruction {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .snils_make_instruction_item {
+
+            img {
+                display: block;
+                width: 163px;
+                height: 163px;
+                margin: 0 auto;
+            }
+
+            h6 {
+                color: #ffffff;
+                font-family: "Plumb Condensed", sans-serif;
+                font-size: 30px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 36px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 36px 0 30px;
+            }
+
+            p {
+                color: #ffffff;
+                font-family: "Trebuchet MS", sans-serif;
+                font-size: 17px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: normal;
+                text-align: center;
+                max-width: 356px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.snils_make_arrow {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    height: 65px;
+    background-image: url(img/where-bg-02.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.snils_question_wrapper {
+    position: relative;
+    max-width: 1366px;
+    width: 100%;
+    margin: -32px auto 0;
+
+
+    .bg {
+        width: 100%;
+        height: 300px;
+        background-image: url(img/where-bg-03.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 32px;
+        left: 0;
+    }
+
+    .snils_question {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+
+        img {
+            display: block;
+        }
+
+        p {
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.34);
+            color: #ffffff;
+            font-family: "Plumb Condensed", sans-serif;
+            font-size: 30px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 36px;
+            text-align: left;
+        }
+
+        form {
+            border: 1px solid rgba(0, 0, 0, 0.46);
+            background-color: rgba(255, 255, 255, 0.34);;
+
+        }
+    }
+}
+
 
 .snils_get_new_wrapper {
     padding-top: 90px;
@@ -378,9 +562,9 @@ html, body {
     background-position: top center;
 
     .footer {
-        background-color: #50668e;
+        background-color: rgba(80, 102, 142, 0.8);
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%);
-        opacity: 0.9;
+
 
         .footer_menu {
             display: flex;
@@ -453,9 +637,10 @@ html, body {
             justify-content: space-between;
             padding-top: 42px;
 
-            .footer_content_item{
+            .footer_content_item {
 
                 .footer_logo {
+                    margin-right: 20px;
                     padding-bottom: 25px;
                     display: flex;
                     flex-direction: row;
@@ -488,7 +673,9 @@ html, body {
                     }
                 }
 
-                .footer_phone{
+                .footer_phone {
+                    margin-right: 20px;
+
                     a {
                         display: block;
                         text-decoration: none;
@@ -506,7 +693,7 @@ html, body {
                 }
             }
 
-            p{
+            p {
                 color: #ffffff;
                 font-family: "Trebuchet MS", sans-serif;
                 font-size: 14px;
@@ -518,23 +705,24 @@ html, body {
                 margin-left: 35px;
             }
 
-            .forma{
+            .forma {
                 display: flex;
                 flex-direction: row;
                 justify-content: right;
+                align-items: stretch;
 
-                .forma-item{
+                .forma-item {
                     margin-left: 20px;
                     margin-right: 14px;
 
-                    .form-group{
+                    .form-group {
                         margin-bottom: 11px;
 
-                        input{
+                        input {
                             padding: 6px 16px;
                             width: 243px;
 
-                            &::placeholder{
+                            &::placeholder {
                                 color: #969494;
                                 font-family: "Plumb Condensed", sans-serif;
                                 font-size: 17px;
@@ -549,12 +737,13 @@ html, body {
                     }
                 }
 
-                .form-text{
-                    textarea{
+                .form-text {
+                    textarea {
                         padding: 6px 16px;
                         width: 243px;
-                        height: 113.5px;
-                        &::placeholder{
+                        height: 115px;
+
+                        &::placeholder {
                             color: #969494;
                             font-family: "Plumb Condensed", sans-serif;
                             font-size: 17px;
@@ -568,7 +757,7 @@ html, body {
                 }
             }
 
-            .btn_contacts{
+            .btn_contacts {
                 margin: 28px 0 0 20px;
                 padding: 15px 17px;
                 border: none;
