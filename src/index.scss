@@ -392,7 +392,7 @@ html, body {
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
             background-color: #ffffff;
             position: absolute;
-            top: 5px;
+            top: 4px;
             right: -20px;
         }
 
@@ -485,6 +485,26 @@ html, body {
     width: 100%;
     margin: -32px auto 0;
 
+    &:before{
+        display: block;
+        content: "";
+        width: 1366px;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.15);
+        position: absolute;
+        top: 25px;
+    }
+
+    &:after{
+        display: block;
+        content: "";
+        width: 1366px;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.15);
+        position: absolute;
+        bottom: 35px;
+    }
+
 
     .bg {
         width: 100%;
@@ -524,9 +544,91 @@ html, body {
         }
 
         form {
-            border: 1px solid rgba(0, 0, 0, 0.46);
-            background-color: rgba(255, 255, 255, 0.34);;
+            border: 1px solid rgba(0, 0, 0, 0.35);
+            background-color: rgba(255, 255, 255, 0.34);
+            padding: 5px;
 
+            .forma{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: stretch;
+                border: 1px solid rgba(0, 0, 0, 0.35);
+                background-color: rgba(255, 255, 255, 0.34);
+                padding: 30px 15px;
+
+                p{
+                    margin: 0 0 15px;
+                    padding-bottom: 5px;
+                    color: #56575b;
+                    font-family: "Trebuchet MS", sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 23.71px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+                .form-group{
+                    margin-bottom: 8px;
+
+                    input{
+                        padding: 5px;
+                        width: 100%;
+
+                        &::placeholder{
+                            color: #969494;
+                            font-family: "Trebuchet MS", sans-serif;
+                            font-size: 14px;
+                            font-style: italic;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                        }
+                    }
+
+                    textarea{
+                        height: 95px;
+                        width: 100%;
+                        padding: 5px;
+
+                        &::placeholder{
+                            color: #969494;
+                            font-family: "Trebuchet MS", sans-serif;
+                            font-size: 14px;
+                            font-style: italic;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .btn_contacts{
+                    margin: 0 auto;
+                    padding: 7px 30px;
+                    border: none;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.5);
+                    border-radius: 3px;
+                    background-color: #63799c;
+                    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%);
+                    color: #ffffff;
+                    font-family: "Trebuchet MS", sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 16.68px;
+                    text-align: center;
+
+                    &:hover{
+                        background-color: #1f4177;
+                    }
+                }
+            }
         }
     }
 }
@@ -715,8 +817,9 @@ html, body {
                     margin-left: 20px;
                     margin-right: 14px;
 
+
                     .form-group {
-                        margin-bottom: 11px;
+                        margin-bottom: 10px;
 
                         input {
                             padding: 6px 16px;
@@ -738,10 +841,11 @@ html, body {
                 }
 
                 .form-text {
+                    margin-bottom: 10px;
                     textarea {
                         padding: 6px 16px;
                         width: 243px;
-                        height: 115px;
+                        height: 100%;
 
                         &::placeholder {
                             color: #969494;
@@ -769,9 +873,12 @@ html, body {
                 font-weight: 400;
                 font-style: normal;
                 letter-spacing: normal;
-
                 text-align: center;
                 text-transform: uppercase;
+                
+                &:hover{
+                    background-color: #f5135c;
+                }
 
             }
         }
