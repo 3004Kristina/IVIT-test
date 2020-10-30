@@ -153,27 +153,35 @@ html, body {
                 }
 
                 &.with_dropdown {
+                    &:after{
+                        display: block;
+                        content: "";
+                        width: 8px;
+                        height: 4px;
+                        background-image: url("img/arrow.png");
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        position: absolute;
+                        top: 18px;
+                        right: 55px;
+                    }
 
                     .dropdown {
                         list-style: none;
                         margin: 0;
-                        display: none;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.2s;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
                     }
 
-                }
+                    &.open .dropdown{
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
 
-
-                &:nth-child(2):after {
-                    display: block;
-                    content: "";
-                    width: 8px;
-                    height: 4px;
-                    background-image: url("img/arrow.png");
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    position: absolute;
-                    top: 18px;
-                    right: 55px;
                 }
 
                 a {
@@ -207,6 +215,10 @@ html, body {
                 }
             }
         }
+    }
+
+    .mobile_menu_btn {
+        display: none;
     }
 }
 
@@ -921,8 +933,30 @@ html, body {
 
 @media (max-width: 780px) {
 
+    body.mobile-menu-opened{
+        overflow: hidden;
+    }
+
+    .mobile_menu_bg {
+        opacity: 0;
+        position: fixed;
+        z-index: 500;
+        pointer-events: none;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #131313;
+        transition: opacity 0.2s;
+
+        body.mobile-menu-opened & {
+            pointer-events: auto;
+            opacity: 0.6;
+        }
+    }
+
     .header {
-        position: relative;
+        position: static;
 
         .contact_info_wrapper {
 
@@ -935,6 +969,8 @@ html, body {
 
             .header_logo_wrapper {
                 padding: 20px 0;
+                margin-left: 20px;
+                justify-content: left;
 
                 img {
                     width: 30px;
@@ -949,67 +985,44 @@ html, body {
     }
 
     .main_menu_wrapper {
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 10;
+        right: 0;
+        z-index: 1000;
+        height: 100vh;
 
         .main_menu {
             background-color: #ffffff;
-            opacity: 0.78;
-            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            position: static;
             top: 0;
-            width: 100%;
+            height: 100%;
+
 
             menu {
-                display: none;
-                flex-direction: row;
-                flex-wrap: nowrap;
+                display: flex;
+                flex-direction: column;
                 justify-content: stretch;
                 list-style: none;
                 margin: 0;
-                padding: 0;
-                position: relative;
+                padding: 100px 0 0;
+                position: static;
 
                 &:before {
-                    display: block;
-                    content: "";
-                    width: 100%;
-                    height: 11px;
-                    background-image: url("img/ellipse.png");
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    position: absolute;
-                    bottom: -9px;
-                    right: 0;
+                    display: none;
                 }
 
                 &:after {
-                    display: block;
-                    content: "";
-                    width: 2px;
-                    height: 100%;
-                    background-image: url("img/palka.svg");
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+                    display: none;
                 }
 
                 > li {
-                    position: relative;
+                    position: static;
 
                     &:before {
-                        display: block;
-                        content: "";
-                        width: 2px;
-                        height: 100%;
-                        background-image: url("img/palka.svg");
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                        display: none;
                     }
 
                     &.with_dropdown {
@@ -1032,8 +1045,8 @@ html, body {
                         background-repeat: no-repeat;
                         background-position: center center;
                         position: absolute;
-                        top: 18px;
-                        right: 55px;
+                        top: 162px;
+                        right: 27px;
                     }
 
                     a {
@@ -1047,7 +1060,7 @@ html, body {
                         text-align: left;
                         text-transform: uppercase;
                         text-decoration: none;
-                        padding: 10px 40px 6px;
+                        padding: 10px;
                         margin: 0;
 
                         span {
@@ -1063,7 +1076,52 @@ html, body {
 
 
                     &.active a span {
-                        border-color: #f5135c;
+                        border-color: transparent;
+                    }
+                }
+            }
+
+            body.mobile-menu-opened &{
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        .mobile_menu_btn {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background-color: #f5135c;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            span {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background-color: #131313;
+                margin: 2px 0;
+                transition: transform 0.2s, opacity 0.2s;
+            }
+
+            body.mobile-menu-opened & {
+                span {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(4.25px, 4.25px);
+
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate(4.25px, -4.25px) ;
                     }
                 }
             }
