@@ -46,6 +46,10 @@ html, body {
                 a {
                     color: #ffffff;
                     text-decoration: none;
+
+                    &:hover {
+                        color: #f5135c;
+                    }
                 }
             }
         }
@@ -94,8 +98,7 @@ html, body {
     z-index: 10;
 
     .main_menu {
-        background-color: #ffffff;
-        opacity: 0.78;
+        background-color: rgba(255, 255, 255, 0.78);
         position: absolute;
         top: 0;
         width: 100%;
@@ -169,12 +172,33 @@ html, body {
                     .dropdown {
                         list-style: none;
                         margin: 0;
+                        padding: 0;
                         opacity: 0;
                         pointer-events: none;
                         transition: opacity 0.2s;
                         position: absolute;
                         top: 100%;
                         left: 0;
+                        background-color: rgba(255, 255, 255, 0.78);
+                        width: 100%;
+
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            padding: 10px;
+                            color: #383838;
+                            font-family: "Plumb Condensed", sans-serif;
+                            font-size: 18px;
+                            font-weight: 400;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            text-align: left;
+                            text-transform: uppercase;
+
+                            &:hover {
+                                color: #f5135c;
+                            }
+                        }
                     }
 
                     &.open .dropdown{
@@ -184,7 +208,7 @@ html, body {
 
                 }
 
-                a {
+                > a {
                     display: block;
                     color: #383838;
                     font-family: "Plumb Condensed", sans-serif;
@@ -806,6 +830,10 @@ html, body {
                         line-height: 40px;
                         text-align: right;
                         text-transform: uppercase;
+
+                        &:hover {
+                            color: #f5135c;
+                        }
                     }
                 }
             }
@@ -924,6 +952,10 @@ html, body {
                     a {
                         color: #ffffff;
                         text-decoration: none;
+
+                        &:hover {
+                            color: #f5135c;
+                        }
                     }
                 }
             }
@@ -1030,7 +1062,18 @@ html, body {
                         .dropdown {
                             list-style: none;
                             margin: 0;
-                            display: none;
+                            display: block;
+                            position: static;
+                            opacity: 1;
+                            pointer-events: auto;
+                            padding-left: 40px;
+                            a {
+                                font-size: 16px;
+                                text-transform: unset;
+                                text-align: left;
+                                padding: 6px;
+
+                            }
                         }
 
                     }
@@ -1104,7 +1147,7 @@ html, body {
                 display: block;
                 width: 25px;
                 height: 2px;
-                background-color: #131313;
+                background-color: #ffffff;
                 margin: 2px 0;
                 transition: transform 0.2s, opacity 0.2s;
             }
