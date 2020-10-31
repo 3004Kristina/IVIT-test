@@ -37,3 +37,4 @@ mobile_menu_bg.addEventListener('click', () => {
     body.classList.remove('mobile-menu-opened');
 });
 
+
