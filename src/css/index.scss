@@ -118,7 +118,7 @@ html, body {
                 content: "";
                 width: 100%;
                 height: 11px;
-                background-image: url("img/ellipse.png");
+                background-image: url("../img/ellipse.png");
                 background-repeat: no-repeat;
                 background-position: center center;
                 position: absolute;
@@ -131,7 +131,7 @@ html, body {
                 content: "";
                 width: 2px;
                 height: 100%;
-                background-image: url("img/palka.svg");
+                background-image: url("../img/palka.svg");
                 background-repeat: no-repeat;
                 background-position: center center;
                 position: absolute;
@@ -147,7 +147,7 @@ html, body {
                     content: "";
                     width: 2px;
                     height: 100%;
-                    background-image: url("img/palka.svg");
+                    background-image: url("../img/palka.svg");
                     background-repeat: no-repeat;
                     background-position: center center;
                     position: absolute;
@@ -156,12 +156,12 @@ html, body {
                 }
 
                 &.with_dropdown {
-                    &:after{
+                    &:after {
                         display: block;
                         content: "";
                         width: 8px;
                         height: 4px;
-                        background-image: url("img/arrow.png");
+                        background-image: url("../img/arrow.png");
                         background-repeat: no-repeat;
                         background-position: center center;
                         position: absolute;
@@ -182,7 +182,7 @@ html, body {
                         background-color: rgba(255, 255, 255, 0.78);
                         width: 100%;
 
-                        a{
+                        a {
                             display: block;
                             text-decoration: none;
                             padding: 10px;
@@ -201,7 +201,7 @@ html, body {
                         }
                     }
 
-                    &.open .dropdown{
+                    &.open .dropdown {
                         opacity: 1;
                         pointer-events: auto;
                     }
@@ -247,7 +247,7 @@ html, body {
 }
 
 .main_banner {
-    background-image: url(img/4-layers.png);
+    background-image: url(../img/4-layers.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left bottom;
@@ -359,7 +359,7 @@ html, body {
                         height: 29px;
                         top: -11px;
                         left: -42px;
-                        background-image: url("img/tick.png");
+                        background-image: url("../img/tick.png");
                         background-repeat: no-repeat;
                         background-position: center center;
 
@@ -386,14 +386,15 @@ html, body {
 }
 
 .snils_make_instruction_wrapper {
-    max-width: 1366px;
-    width: 100%;
-    height: 720px;
-    margin: 0 auto;
-    padding: 40px 0 0;
-    background-image: url(img/where-bg-01.png);
+    //max-width: 1366px;
+    //width: 100%;
+    //height: 720px;
+    //margin: 0 auto;
+    padding: 3vw 0 1vw;
+    background-image: url(../img/where-bg-01.png);
     background-repeat: no-repeat;
     background-position: bottom center;
+    background-size: cover;
 
 
     p {
@@ -412,7 +413,7 @@ html, body {
 
     .snils_make_instruction_text {
         margin: 0 auto;
-        background-image: url(img/trapezia.png);
+        background-image: url(../img/trapezia.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
@@ -506,35 +507,36 @@ html, body {
 }
 
 .snils_make_arrow {
-    max-width: 1366px;
-    width: 100%;
-    margin: 0 auto;
+    //max-width: 1366px;
+    //width: 100%;
+    //margin: 0 auto;
     height: 65px;
-    background-image: url(img/where-bg-02.png);
+    background-image: url(../img/where-bg-02.png);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
 }
 
 .snils_question_wrapper {
     position: relative;
-    max-width: 1366px;
-    width: 100%;
+    //max-width: 1366px;
+    //width: 100%;
     margin: -32px auto 0;
 
-    &:before{
+    &:before {
         display: block;
         content: "";
-        width: 1366px;
+        width: 100%;
         height: 1px;
         background-color: rgba(0, 0, 0, 0.15);
         position: absolute;
         top: 25px;
     }
 
-    &:after{
+    &:after {
         display: block;
         content: "";
-        width: 1366px;
+        width: 100%;
         height: 1px;
         background-color: rgba(0, 0, 0, 0.15);
         position: absolute;
@@ -545,7 +547,7 @@ html, body {
     .bg {
         width: 100%;
         height: 300px;
-        background-image: url(img/where-bg-03.png);
+        background-image: url(../img/where-bg-03.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -577,6 +579,7 @@ html, body {
             letter-spacing: normal;
             line-height: 36px;
             text-align: left;
+            text-transform: uppercase;
         }
 
         form {
@@ -584,7 +587,7 @@ html, body {
             background-color: rgba(255, 255, 255, 0.34);
             padding: 5px;
 
-            .forma{
+            .forma {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -593,7 +596,7 @@ html, body {
                 background-color: rgba(255, 255, 255, 0.34);
                 padding: 30px 15px;
 
-                p{
+                p {
                     margin: 0 0 15px;
                     padding-bottom: 5px;
                     color: #56575b;
@@ -608,14 +611,14 @@ html, body {
                     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 }
 
-                .form-group{
+                .form-group {
                     margin-bottom: 8px;
 
-                    input{
+                    input {
                         padding: 5px;
                         width: 100%;
 
-                        &::placeholder{
+                        &::placeholder {
                             color: #969494;
                             font-family: "Trebuchet MS", sans-serif;
                             font-size: 14px;
@@ -626,12 +629,13 @@ html, body {
                         }
                     }
 
-                    textarea{
+                    textarea {
                         height: 95px;
                         width: 100%;
                         padding: 5px;
+                        resize: none;
 
-                        &::placeholder{
+                        &::placeholder {
                             color: #969494;
                             font-family: "Trebuchet MS", sans-serif;
                             font-size: 14px;
@@ -643,7 +647,7 @@ html, body {
                     }
                 }
 
-                .btn_contacts{
+                .btn_contacts {
                     margin: 0 auto;
                     padding: 7px 30px;
                     border: none;
@@ -660,7 +664,7 @@ html, body {
                     line-height: 16.68px;
                     text-align: center;
 
-                    &:hover{
+                    &:hover {
                         background-color: #1f4177;
                     }
                 }
@@ -673,13 +677,14 @@ html, body {
 .snils_get_new_wrapper {
     padding-top: 90px;
 
-    .snils_get_new_bg{
-        background-image: url(img/snils.png);
+    .snils_get_new_bg {
+        background-image: url(../img/snils.png);
         background-size: contain;
         background-repeat: no-repeat;
         height: 306px;
         background-position: center center;
     }
+
     .snils_get_new {
 
         p {
@@ -697,7 +702,7 @@ html, body {
 }
 
 .footer_wrapper {
-    background-image: url(img/footer.png);
+    background-image: url(../img/footer.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -726,7 +731,7 @@ html, body {
                     content: "";
                     width: 2px;
                     height: 100%;
-                    background-image: url("img/palka.svg");
+                    background-image: url("../img/palka.svg");
                     background-repeat: no-repeat;
                     background-position: center center;
                     position: absolute;
@@ -739,7 +744,7 @@ html, body {
                     content: "";
                     width: 2px;
                     height: 100%;
-                    background-image: url("img/palka.svg");
+                    background-image: url("../img/palka.svg");
                     background-repeat: no-repeat;
                     background-position: center center;
                     position: absolute;
@@ -885,10 +890,12 @@ html, body {
 
                 .form-text {
                     margin-bottom: 10px;
+
                     textarea {
                         padding: 6px 16px;
                         width: 243px;
                         height: 100%;
+                        resize: none;
 
                         &::placeholder {
                             color: #969494;
@@ -919,7 +926,7 @@ html, body {
                 text-align: center;
                 text-transform: uppercase;
 
-                &:hover{
+                &:hover {
                     background-color: #f5135c;
                 }
 
@@ -965,7 +972,7 @@ html, body {
 
 @media (max-width: 780px) {
 
-    body.mobile-menu-opened{
+    body.mobile-menu-opened {
         overflow: hidden;
     }
 
@@ -1062,11 +1069,12 @@ html, body {
                         .dropdown {
                             list-style: none;
                             margin: 0;
-                            display: block;
+                            display: none;
                             position: static;
                             opacity: 1;
                             pointer-events: auto;
                             padding-left: 40px;
+
                             a {
                                 font-size: 16px;
                                 text-transform: unset;
@@ -1076,15 +1084,17 @@ html, body {
                             }
                         }
 
+                        &.open .dropdown {
+                            display: block;
+                        }
                     }
-
 
                     &:nth-child(2):after {
                         display: block;
                         content: "";
                         width: 8px;
                         height: 4px;
-                        background-image: url("img/arrow.png");
+                        background-image: url("../img/arrow.png");
                         background-repeat: no-repeat;
                         background-position: center center;
                         position: absolute;
@@ -1124,7 +1134,7 @@ html, body {
                 }
             }
 
-            body.mobile-menu-opened &{
+            body.mobile-menu-opened & {
                 opacity: 1;
                 pointer-events: auto;
             }
@@ -1164,7 +1174,7 @@ html, body {
                     }
 
                     &:nth-child(3) {
-                        transform: rotate(-45deg) translate(4.25px, -4.25px) ;
+                        transform: rotate(-45deg) translate(4.25px, -4.25px);
                     }
                 }
             }
@@ -1172,7 +1182,7 @@ html, body {
     }
 
     .main_banner {
-        background-image: url(img/bannermob.jpg);
+        background-image: url(../img/bannermob.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: left bottom;
@@ -1327,11 +1337,11 @@ html, body {
         margin: 0;
         padding: 30px 0;
 
-        &:before{
+        &:before {
             display: none;
         }
 
-        &:after{
+        &:after {
             display: none;
         }
 
@@ -1353,7 +1363,7 @@ html, body {
                 margin: 20px 0;
             }
 
-            img.mobile_arr{
+            img.mobile_arr {
                 transform: rotate(90deg);
                 width: 50px;
                 height: auto;
@@ -1371,7 +1381,7 @@ html, body {
                 background-color: rgba(80, 102, 142, 0.4);
                 padding: 5px;
 
-                .forma{
+                .forma {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -1380,7 +1390,7 @@ html, body {
                     background-color: rgba(255, 255, 255, 0.34);
                     padding: 30px 15px;
 
-                    p{
+                    p {
                         margin: 0 0 15px;
                         padding-bottom: 5px;
                         color: #56575b;
@@ -1395,15 +1405,15 @@ html, body {
                         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                     }
 
-                    .form-group{
+                    .form-group {
                         margin-bottom: 8px;
 
-                        input{
+                        input {
                             padding: 5px;
                             width: 100%;
                         }
 
-                        textarea{
+                        textarea {
                             height: 95px;
                             width: 100%;
                             padding: 5px;
@@ -1417,11 +1427,12 @@ html, body {
     .snils_get_new_wrapper {
         padding-top: 40px;
 
-        .snils_get_new_bg{
-            background-image: url(img/ddmobile.jpg);
+        .snils_get_new_bg {
+            background-image: url(../img/ddmobile.jpg);
             height: 250px;
 
         }
+
         .snils_get_new {
 
             p {
@@ -1503,6 +1514,7 @@ html, body {
 
                     .form-text {
                         margin: 0 20px;
+
                         textarea {
                             padding: 6px 16px;
                             width: 100%;
@@ -1530,6 +1542,8 @@ html, body {
         }
     }
 }
+
+
 
 
 

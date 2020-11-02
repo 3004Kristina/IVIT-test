@@ -7,19 +7,13 @@ for (let dropDownToggle of document.querySelectorAll('.with_dropdown .dropdown_t
     let withDropdown = dropDownToggle.closest('.with_dropdown');
 
     dropDownToggle.addEventListener('click', (e) => {
-        console.log('click on dropdown_toggle', dropDownToggle);
-
         e.preventDefault();
-       // e.stopPropagation();
-
         withDropdown.classList.toggle('open');
     });
 }
 
 
 document.addEventListener('click', (e) => {
-    console.log('click on document');
-
     for (let dropDown of document.querySelectorAll('.with_dropdown.open')) {
         if (dropDown.contains(e.target) === false) {
             dropDown.closest('.with_dropdown').classList.remove('open');
@@ -36,5 +30,6 @@ mobile_menu_btn.addEventListener('click', (e) => {
 mobile_menu_bg.addEventListener('click', () => {
     body.classList.remove('mobile-menu-opened');
 });
+
 
 
